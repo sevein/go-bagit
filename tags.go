@@ -22,7 +22,7 @@ func CreateBagInfo() TagSet {
 	return TagSet{
 		Filename: "bag-info.txt",
 		Tags: map[string]string{
-			StandardTags.BagSoftwareAgent: fmt.Sprintf("go-bagit %s <https://github.com/nyudlts/go-bagit>", libraryVersion),
+			StandardTags.BagSoftwareAgent: GetSoftwareAgent(),
 			StandardTags.BaggingDate: fmt.Sprintf(currentTime.Format("2006-02-01")),
 		},
 	}
